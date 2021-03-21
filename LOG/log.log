@@ -1,0 +1,90 @@
+%(asctime)s - %(module)s - %(thread)d - %(filename)s - [line:%(lineno)d]- %(levelname)s : %(message)s
+%(asctime)s - %(module)s - %(thread)d - %(filename)s - [line:%(lineno)d]- %(levelname)s : %(message)s
+%(asctime)s - %(module)s - %(thread)d - %(filename)s - [line:%(lineno)d]- %(levelname)s : %(message)s
+2021-03-15 11:39:01,187 - test_labourApi - 4636802496 - test_labourApi.py - [line:8]- DEBUG : ======================setup=======================
+2021-03-15 11:39:01,188 - test_labourApi - 4636802496 - test_labourApi.py - [line:14]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 11:39:01,188 - test_labourApi - 4636802496 - test_labourApi.py - [line:14]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 11:42:01,078 - test_labourApi - 4794822080 - test_labourApi.py - [line:8]- DEBUG : ======================setup=======================
+2021-03-15 11:42:01,079 - test_labourApi - 4794822080 - test_labourApi.py - [line:14]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 11:59:12,094 - test_labourApi - 4594851264 - test_labourApi.py - [line:13]- DEBUG : ======================setup=======================
+2021-03-15 11:59:12,099 - test_labourApi - 4594851264 - test_labourApi.py - [line:65]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 11:59:33,986 - test_labourApi - 4468768192 - test_labourApi.py - [line:13]- DEBUG : ======================setup=======================
+2021-03-15 11:59:34,002 - connectionpool - 4468768192 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 11:59:34,051 - connectionpool - 4468768192 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 76
+2021-03-15 11:59:34,052 - test_labourApi - 4468768192 - test_labourApi.py - [line:65]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:37:37,925 - connectionpool - 4689427904 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:37:38,070 - connectionpool - 4689427904 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:37:38,074 - test_labourApi - 4689427904 - test_labourApi.py - [line:15]- DEBUG : ======================setup=======================
+2021-03-15 13:37:38,110 - connectionpool - 4689427904 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:37:38,111 - test_labourApi - 4689427904 - test_labourApi.py - [line:67]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:41:28,772 - connectionpool - 4461661632 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:41:28,809 - connectionpool - 4461661632 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:41:28,813 - test_labourApi - 4461661632 - test_labourApi.py - [line:15]- DEBUG : ======================setup=======================
+2021-03-15 13:41:28,841 - connectionpool - 4461661632 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:41:28,842 - test_labourApi - 4461661632 - test_labourApi.py - [line:42]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:42:04,708 - connectionpool - 4423777728 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:42:04,746 - connectionpool - 4423777728 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:42:04,750 - test_labourApi - 4423777728 - test_labourApi.py - [line:15]- DEBUG : ======================setup=======================
+2021-03-15 13:42:04,768 - connectionpool - 4423777728 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:42:04,772 - test_labourApi - 4423777728 - test_labourApi.py - [line:42]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:42:39,912 - connectionpool - 4526448064 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:42:39,969 - connectionpool - 4526448064 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:42:39,972 - test_labourApi - 4526448064 - test_labourApi.py - [line:16]- DEBUG : ======================setup=======================
+2021-03-15 13:42:39,991 - connectionpool - 4526448064 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:42:39,992 - test_labourApi - 4526448064 - test_labourApi.py - [line:44]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:45:13,391 - connectionpool - 4487675328 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:45:13,436 - connectionpool - 4487675328 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:45:13,441 - test_labourApi - 4487675328 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:45:13,441 - test_labourApi - 4487675328 - test_labourApi.py - [line:43]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:45:27,728 - connectionpool - 4555795904 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:45:27,770 - connectionpool - 4555795904 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:45:27,773 - test_labourApi - 4555795904 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:45:27,774 - test_labourApi - 4555795904 - test_labourApi.py - [line:43]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:45:41,334 - connectionpool - 4642188736 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:45:41,376 - connectionpool - 4642188736 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:45:41,380 - test_labourApi - 4642188736 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:45:41,380 - test_labourApi - 4642188736 - test_labourApi.py - [line:43]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:48:54,470 - connectionpool - 4496133568 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:48:54,513 - connectionpool - 4496133568 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:48:54,516 - test_labourApi - 4496133568 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:48:54,534 - connectionpool - 4496133568 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:48:54,535 - test_labourApi - 4496133568 - test_labourApi.py - [line:45]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:52:08,780 - connectionpool - 4505513408 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:52:08,818 - connectionpool - 4505513408 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:52:08,821 - test_labourApi - 4505513408 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:52:08,855 - connectionpool - 4505513408 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:52:08,855 - test_labourApi - 4505513408 - test_labourApi.py - [line:44]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:56:28,649 - connectionpool - 4643278272 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 13:56:28,691 - connectionpool - 4643278272 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 13:56:28,694 - test_labourApi - 4643278272 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:56:28,724 - connectionpool - 4643278272 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "GET /api/employer/list?page=1&limit=10 HTTP/1.1" 200 None
+2021-03-15 13:56:28,727 - test_labourApi - 4643278272 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 13:56:28,727 - test_labourApi - 4643278272 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 13:56:28,746 - connectionpool - 4643278272 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 13:56:28,747 - test_labourApi - 4643278272 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 15:15:08,205 - connectionpool - 4579794368 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 15:15:08,205 - connectionpool - 4579794368 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 15:15:08,276 - connectionpool - 4579794368 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 15:15:08,276 - connectionpool - 4579794368 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 15:16:08,745 - connectionpool - 4440600000 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 15:16:08,745 - connectionpool - 4440600000 - connectionpool.py - [line:227]- DEBUG : Starting new HTTP connection (1): labour.bringbuys.com:80
+2021-03-15 15:16:08,843 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 15:16:08,843 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/sys/login?username=liwei2&password=123456&captcha=33333 HTTP/1.1" 200 None
+2021-03-15 15:16:08,844 - test - 4440600000 - test.py - [line:10]- INFO : ======================setUp=======================
+2021-03-15 15:16:08,844 - test - 4440600000 - test.py - [line:10]- INFO : ======================setUp=======================
+2021-03-15 15:16:08,845 - test - 4440600000 - test.py - [line:15]- INFO : ======================用例执行中=======================
+2021-03-15 15:16:08,845 - test - 4440600000 - test.py - [line:15]- INFO : ======================用例执行中=======================
+2021-03-15 15:16:08,845 - test - 4440600000 - test.py - [line:19]- INFO : =================tearDown 此用例执行完毕=================
+2021-03-15 15:16:08,845 - test - 4440600000 - test.py - [line:19]- INFO : =================tearDown 此用例执行完毕=================
+2021-03-15 15:16:08,845 - test_labourApi - 4440600000 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 15:16:08,845 - test_labourApi - 4440600000 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 15:16:08,875 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "GET /api/employer/list?page=1&limit=10 HTTP/1.1" 200 None
+2021-03-15 15:16:08,875 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "GET /api/employer/list?page=1&limit=10 HTTP/1.1" 200 None
+2021-03-15 15:16:08,877 - test_labourApi - 4440600000 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 15:16:08,877 - test_labourApi - 4440600000 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 15:16:08,878 - test_labourApi - 4440600000 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 15:16:08,878 - test_labourApi - 4440600000 - test_labourApi.py - [line:16]- DEBUG : ==================setup 此用例开始执行===================
+2021-03-15 15:16:08,901 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 15:16:08,901 - connectionpool - 4440600000 - connectionpool.py - [line:452]- DEBUG : http://labour.bringbuys.com:80 "POST /api/employer/save HTTP/1.1" 200 None
+2021-03-15 15:16:08,902 - test_labourApi - 4440600000 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================
+2021-03-15 15:16:08,902 - test_labourApi - 4440600000 - test_labourApi.py - [line:56]- DEBUG : =================tearDown 此用例执行完毕=================

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Test report</title>
+    <meta name="generator" content="BSTestRunner 0.8.4"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    
+<style type="text/css" media="screen">
+
+/* -- css div popup ------------------------------------------------------------------------ */
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #99CCFF;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 10pt;
+    width: 1200px;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+
+#show_detail_line .label {
+    font-size: 85%;
+    cursor: pointer;
+}
+
+#show_detail_line {
+    margin: 2em auto 1em auto;
+}
+
+#total_row  { font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+</style>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class="container">
+    <div class='heading'>
+<h1>Test report</h1>
+<p><strong>Start Time:</strong> 2021-03-15 15:21:09</p>
+<p><strong>Duration:</strong> 0:00:00.091867</p>
+<p><strong>Status:</strong> <span class="text text-success">Pass <strong>2</strong></span></p>
+
+<p class='description'>Test report</p>
+</div>
+
+
+    
+<p id='show_detail_line'>
+<span class="label label-primary" onclick="showCase(0)">Summary</span>
+<span class="label label-danger" onclick="showCase(1)">Failed</span>
+<span class="label label-default" onclick="showCase(2)">All</span>
+</p>
+<table id='result_table' class="table">
+    <thead>
+        <tr id='header_row'>
+            <th>Test Group/Test case</td>
+            <th>Count</td>
+            <th>Pass</td>
+            <th>Fail</td>
+            <th>Error</td>
+            <th>View</td>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr class='text text-success'>
+    <td>test_labourApi.Test_case</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a class="btn btn-xs btn-primary"href="javascript:showClassDetail('c1',2)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='text text-success'><div class='testcase'>test_employer_list</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: {"success":true,"code":0,"msg":"success","result":{"data":{"totalCount":87,"pageSize":10,"totalPage":9,"currPage":1,"list":[{"id":92,"businessNo":"SSS51553522","nameCn":"手机制造有限公司","shortName":"手机制造","namePt":"手机制造PT","industryId":19,"address":"横琴跨境说公司","jobCenterId":1,"phoneArea":"0756","phone":"6354145","fax":"8008208820","cooperatorId":46,"onlyEnName":1,"remark":"横琴珠海横琴跨境说网络科技有限公司位于 珠海横琴新区","pspCode":"PSP555664","legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-15 13:52:09","updateTime":"2021-03-15 13:52:09","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":91,"businessNo":"SSS51553511","nameCn":"手机制造有限公司","shortName":"手机制造","namePt":"手机制造PT","industryId":19,"address":"横琴跨境说公司","jobCenterId":1,"phoneArea":"0756","phone":"6354145","fax":"8008208820","cooperatorId":46,"onlyEnName":1,"remark":"横琴珠海横琴跨境说网络科技有限公司位于 珠海横琴新区","pspCode":"PSP555664","legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-15 13:50:39","updateTime":"2021-03-15 13:50:39","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":90,"businessNo":"SSS515535","nameCn":"手机制造有限公司","shortName":"手机制造","namePt":"手机制造PT","industryId":19,"address":"横琴跨境说公司","jobCenterId":1,"phoneArea":"0756","phone":"6354145","fax":"8008208820","cooperatorId":46,"onlyEnName":1,"remark":"横琴珠海横琴跨境说网络科技有限公司位于 珠海横琴新区","pspCode":"PSP555664","legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-15 13:40:09","updateTime":"2021-03-15 13:40:09","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":89,"businessNo":"CESHI314A","nameCn":"澳门钜记饼家","shortName":"钜记","namePt":"JUJI","industryId":17,"address":"澳门","jobCenterId":1,"phoneArea":"0746","phone":"55555","fax":"555","cooperatorId":27,"onlyEnName":0,"remark":null,"pspCode":null,"legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-14 23:35:10","updateTime":"2021-03-14 23:35:10","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"厦门国际"},{"id":88,"businessNo":"CESHI314","nameCn":"小徐测试314有限公司","shortName":"小徐测试314","namePt":"XIAOXU CESHI","industryId":17,"address":"澳门新马路","jobCenterId":1,"phoneArea":"0756","phone":"888888","fax":"075677777","cooperatorId":46,"onlyEnName":0,"remark":null,"pspCode":null,"legalName":"徐先生","legalNameEn":"xu","legalJob":"老板","legalCredentialsNumber":"GUZJ123456","signTime":"2021-03-14 10:45:27","legalPhone":"759964","cardType":0,"cardNumber":"","cardSignOffice":"珠海公安局","jobOnTime":"09:00","jobOffTime":"18:00","jobRest":30,"bank":"中国银行","payDay":"30日","constantName":"徐先生2","constantPhone":"13726285724","constantJob":"监工","serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-14 22:44:50","updateTime":"2021-03-14 23:43:25","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":87,"businessNo":"JPYI45044","nameCn":"窗帘有限公司","shortName":"窗帘","namePt":"窗帘PT","industryId":20,"address":"横琴跨境说公司","jobCenterId":1,"phoneArea":"0756","phone":"6698543","fax":"8008208820","cooperatorId":46,"onlyEnName":1,"remark":"横琴珠海横琴跨境说网络科技有限公司位于 珠海横琴新区","pspCode":"PSP5134685","legalName":"周 先生","legalNameEn":"Vincent","legalJob":"公司总裁","legalCredentialsNumber":"4452211166454623","signTime":"2021-03-10 03:25:41","legalPhone":"13229794612","cardType":0,"cardNumber":"","cardSignOffice":"珠海横琴公安局","jobOnTime":"15:25","jobOffTime":"19:25","jobRest":25,"bank":"农业银行","payDay":"每月10号","constantName":"Mr hu","constantPhone":"15361713284","constantJob":"总裁助理","serviceFee":15000,"firstPayFee":12000,"secondPayFee":25000,"createTime":"2021-03-14 15:25:28","updateTime":"2021-03-14 19:33:13","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":86,"businessNo":"BRB000001","nameCn":"大火柴大火柴","shortName":"大火柴","namePt":"bringbuys","industryId":19,"address":"澳门赌场门口左拐30米","jobCenterId":1,"phoneArea":"010","phone":"2333333","fax":"345124234","cooperatorId":47,"onlyEnName":0,"remark":"brb remark","pspCode":"psp01","legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-12 11:46:58","updateTime":"2021-03-12 11:46:58","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"跨境说"},{"id":85,"businessNo":"LS333","nameCn":"林氏娱乐场","shortName":"林氏","namePt":"LINSHI YULE CHANG","industryId":19,"address":"澳门蛋仔岛","jobCenterId":1,"phoneArea":"0754","phone":"88888","fax":"878787","cooperatorId":47,"onlyEnName":0,"remark":null,"pspCode":null,"legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-10 20:52:23","updateTime":"2021-03-10 20:52:23","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"跨境说"},{"id":84,"businessNo":"SJM160","nameCn":"华为有限公司","shortName":"华为","namePt":"HUAWEI","industryId":20,"address":"环岛东路 1889 号","jobCenterId":1,"phoneArea":"0756","phone":"54153153","fax":"8008208820","cooperatorId":46,"onlyEnName":0,"remark":null,"pspCode":null,"legalName":null,"legalNameEn":null,"legalJob":null,"legalCredentialsNumber":null,"signTime":null,"legalPhone":null,"cardType":null,"cardNumber":null,"cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-09 10:17:26","updateTime":"2021-03-09 10:17:26","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"许小姐"},{"id":83,"businessNo":"CESHI0303-2","nameCn":"厦门国际澳门职介所","shortName":"厦门国际","namePt":"XIAMEN","industryId":1,"address":"澳门","jobCenterId":1,"phoneArea":"0754","phone":"88888","fax":"878787","cooperatorId":47,"onlyEnName":0,"remark":null,"pspCode":null,"legalName":"林宇森","legalNameEn":"jason","legalJob":"劳工","legalCredentialsNumber":"ht55555","signTime":"2021-03-03 05:25:29","legalPhone":null,"cardType":null,"cardNumber":"","cardSignOffice":null,"jobOnTime":null,"jobOffTime":null,"jobRest":null,"bank":null,"payDay":null,"constantName":null,"constantPhone":null,"constantJob":null,"serviceFee":null,"firstPayFee":null,"secondPayFee":null,"createTime":"2021-03-03 17:25:58","updateTime":"2021-03-03 17:25:58","status":0,"jobCenterName":"厦门国际职介所","cooperatorName":"跨境说"}]}}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='text text-success'><div class='testcase'>test_employer_save</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link btn btn-xs btn-default" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: {"success":false,"code":612,"msg":"编号已存在","result":{}}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+    </tbody>
+    <tfoot>
+        <tr id='total_row'>
+            <td>Total</td>
+            <td>2</td>
+            <td class="text text-success">2</td>
+            <td class="text text-danger">0</td>
+            <td class="text text-warning">0</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+
+    <div id='ending'>&nbsp;</div>
+</div>
+
+</body>
+</html>
